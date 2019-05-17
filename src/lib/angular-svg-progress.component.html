@@ -1,0 +1,142 @@
+<span *ngIf="shape === 'heart'">
+  <svg
+    viewBox="0 0 100 100"
+    [ngStyle]="{ width: svgWidth, height: svgHeight }"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient
+        id="def_heart"
+        [attr.x1]="x1"
+        [attr.y1]="y1"
+        [attr.x2]="x2"
+        [attr.y2]="x2"
+      >
+        <stop [attr.offset]="progress" [attr.stop-color]="progressColor">
+          <animate
+            attributeName="offset"
+            [attr.from]="animateFrom / 100"
+            [attr.to]="svgProgress / 100"
+            repeatCount="indefinite"
+            dur="1000ms"
+          />
+        </stop>
+        <stop offset="0%" [attr.stop-color]="backgroundFill" stop-opacity="1" />
+      </linearGradient>
+    </defs>
+    <g>
+      <path
+        [attr.stroke]="borderColor"
+        id="svg_3"
+        d="m49.547763,35.685624c19.58402,-49.023979 96.314852,0 0,63.03083c-96.314852,-63.03083 -19.58402,-112.05481 0,-63.03083z"
+        fill-opacity="null"
+        stroke-opacity="null"
+        stroke-width="1.5"
+        fill="url(#def_heart)"
+      />
+      <text
+        y="55%"
+        x="50%"
+        *ngIf="showPercentage"
+        text-anchor="middle"
+        font-weight="bold"
+        alignment-baseline="middle"
+        [attr.font-size]="fontSize"
+        [attr.fill]="percentageColor"
+        fill="blue"
+      >
+        {{ svgProgress }}%
+      </text>
+    </g>
+  </svg>
+</span>
+<span *ngIf="shape === 'rectangle'">
+  <svg [attr.width]="width" [attr.height]="height">
+    <defs>
+      <linearGradient
+        id="def_rect"
+        [attr.x1]="x1"
+        [attr.y1]="y1"
+        [attr.x2]="x2"
+        [attr.y2]="x2"
+      >
+        <stop [attr.offset]="progress" [attr.stop-color]="progressColor">
+          <animate
+            attributeName="offset"
+            [attr.from]="animateFrom / 100"
+            [attr.to]="svgProgress / 100"
+            repeatCount="indefinite"
+            dur="1000ms"
+          />
+        </stop>
+        <stop offset="0%" [attr.stop-color]="backgroundFill" stop-opacity="1" />
+      </linearGradient>
+    </defs>
+    <g>
+      <rect
+        x="0"
+        [attr.rx]="borderRadius"
+        y="0"
+        [attr.width]="width"
+        [attr.height]="height"
+        [attr.stroke]="borderColor"
+        fill="url(#def_rect)"
+      />
+      <text
+        *ngIf="showPercentage"
+        y="50%"
+        x="50%"
+        text-anchor="middle"
+        font-weight="bold"
+        alignment-baseline="middle"
+        [attr.font-size]="fontSize"
+        [attr.fill]="percentageColor"
+      >
+        {{ svgProgress }}%
+      </text>
+    </g>
+  </svg>
+</span>
+<span *ngIf="shape === 'circle'">
+  <svg
+    class="progress"
+    [attr.width]="(radius + 10) * 2"
+    [attr.height]="(radius + 10) * 2"
+    [attr.viewBox]="circleViewBox"
+  >
+    <g>
+      <circle
+        [attr.cx]="radius + 10"
+        [attr.cy]="radius + 10"
+        [attr.r]="radius"
+        fill="none"
+        [attr.stroke]="backgroundFill"
+        [attr.stroke-width]="circleWidth"
+      />
+      <circle
+        class="progress__value"
+        [attr.cx]="radius + 10"
+        [attr.cy]="radius + 10"
+        [attr.r]="radius"
+        fill="none"
+        transform="rotate(-90deg)"
+        [attr.stroke-dashoffset]="strokeDashoffset"
+        [attr.stroke-dasharray]="circumference"
+        [attr.stroke]="progressColor"
+        [attr.stroke-width]="circleWidth"
+      />
+      <text
+          y="50%"
+          x="50%"
+          *ngIf="showPercentage"
+          text-anchor="middle"
+          font-weight="bold"
+          alignment-baseline="middle"
+          [attr.font-size]="fontSize"
+          [attr.fill]="borderColor"
+        >
+          {{ svgProgress }}%
+        </text>
+    </g>
+  </svg>
+</span>

@@ -1,0 +1,26 @@
+{
+  "name": "angular-svg-progress",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "description": "SVG progress loader compactable for angular and ionic",
+  "author": "Justin K Xavier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinkx/Angular-Svg-Progress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justinkx/Angular-Svg-Progress/issues"
+  },
+  "homepage": "https://github.com/justinkx/Angular-Svg-Progress",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "loader",
+    "svg",
+    "ionic",
+    "typescript"
+  ]
+}
