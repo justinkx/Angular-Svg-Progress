@@ -1,6 +1,16 @@
+[![npm](https://img.shields.io/npm/l/angular-svg-progress.svg)](https://www.npmjs.com/package/angular-svg-progress)
+[![npm](https://img.shields.io/npm/v/angular-svg-progress.svg?style=flat-square)](https://www.npmjs.com/package/angular-svg-progress)
+[![npm](https://badgen.net/npm/dm/angular-svg-progress)](https://www.npmjs.com/package/angular-svg-progress)
+[![npm](https://badgen.net/bundlephobia/minzip/angular-svg-progress)](https://www.npmjs.com/package/angular-svg-progress)
+##### 1.7 min zipped lightweight progress bar
+
 # Angular SVG Progress
 **SVG** Progress component for angular and ionic framework consist of bar, heart and circular loaders.
 
+## Appearance ##
+
+### Basic ###
+  <img src="./src/assets/angular-svg-loader.gif" alt="Appearence">
 
 ## Features
 - Each loader component is an svg.
@@ -38,7 +48,7 @@ import { AngularSvgProgressModule } from 'angular-svg-progress';
 @NgModule({
   ...
   imports: [
-    IonicImageLoader
+    AngularSvgProgressModule
   ]
 })
 export class SharedModule {}
