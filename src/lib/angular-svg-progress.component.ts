@@ -1,5 +1,11 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
+export interface CenterTextStyle {
+  text: string;
+  textSize: number;
+  fillColor: string;
+  fontWeight: number | number;
+}
 @Component({
   selector: 'angular-svg-progress',
   templateUrl: 'angular-svg-progress.component.html'
@@ -12,7 +18,9 @@ export class AngularSvgProgressComponent implements OnInit {
   @Input() height: number = 100;
   @Input() shape: string = 'rectangle';
   @Input() borderColor: string = 'black';
-  @Input() showPercentage: boolean;
+  @Input() showPercentage: boolean = true;
+  @Input() showMiddleText: boolean;
+  @Input() middleTextStyle: CenterTextStyle;
   @Input() percentageColor: string = 'black';
   @Input() direction: string = 'horizontal';
   @Input() backgroundFill: string = '#eee8dc';

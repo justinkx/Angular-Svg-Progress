@@ -47,6 +47,19 @@
       >
         {{ svgProgress }}%
       </text>
+      <text
+        y="55%"
+        x="50%"
+        *ngIf="showMiddleText && !showPercentage"
+        text-anchor="middle"
+        [attr.font-weight]="middleTextStyle.fontWeight"
+        alignment-baseline="middle"
+        [attr.font-size]="middleTextStyle.textSize"
+        [attr.fill]="middleTextStyle.fillColor"
+        fill="blue"
+      >
+        {{middleTextStyle.text}}
+      </text>
     </g>
   </svg>
 </span>
@@ -94,6 +107,19 @@
       >
         {{ svgProgress }}%
       </text>
+       <text
+        y="55%"
+        x="50%"
+        *ngIf="showMiddleText && !showPercentage"
+        text-anchor="middle"
+        [attr.font-weight]="middleTextStyle.fontWeight"
+        alignment-baseline="middle"
+        [attr.font-size]="middleTextStyle.textSize"
+        [attr.fill]="middleTextStyle.fillColor"
+        fill="blue"
+      >
+        {{middleTextStyle.text}}
+      </text>
     </g>
   </svg>
 </span>
@@ -137,6 +163,19 @@
         >
           {{ svgProgress }}%
         </text>
+         <text
+        y="55%"
+        x="50%"
+        *ngIf="showMiddleText && !showPercentage"
+        text-anchor="middle"
+        [attr.font-weight]="middleTextStyle.fontWeight"
+        alignment-baseline="middle"
+        [attr.font-size]="middleTextStyle.textSize"
+        [attr.fill]="middleTextStyle.fillColor"
+        fill="blue"
+      >
+        {{middleTextStyle.text}}
+      </text>
     </g>
   </svg>
 </span>

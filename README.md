@@ -67,6 +67,8 @@ This HTML code demonstrates basic usage of this module:
   [shape]="'rectangle'"
   [borderColor]="'#383a3e'"
   [direction]="'horizontal'"
+  [showMiddleText]="true"
+  [middleTextStyle]="{textSize: 12,text: 'Loading'}"
   [showPercentage]="true"
   [height]="40"
   [progressColor]="'#FF0000'">
@@ -86,12 +88,15 @@ The `<angular-svg-progress />` component takes many attributes that allows you t
 | borderColor | string | Color of the svg progress component border | black |
 | showPercentage | boolean | To show the progress value | false |
 | percentageColor | string | Progress value text color | black |
+| showMiddleText | boolean | To show static text in the middle of the loader | false |
+| middleTextStyle | Object of type{text: string,textSize:number,fillColor:string,fontWeight:number/string} | style object for static text in the middle of the loader | null |
 | direction | string | Direction in which progress indicator grows. [horizontal,vertical] | horizontal |
 | backgroundFill | string | background color of the component svg | #eee8dc |
 | fontSize | number | Font size of the progress value text(pixel) | 15 |
 | borderRadius | number | Border radius for the svg component [only for shape bar] | 10 |
 | radius | number | Radius of the circular progress | 50 |
 | circleWidth | number | Width of the circular disk | 15 |
+
 
 
 ## Support this project
