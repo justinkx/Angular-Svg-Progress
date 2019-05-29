@@ -28,6 +28,7 @@ export class AngularSvgProgressComponent implements OnInit {
   @Input() borderRadius: number = 10;
   @Input() radius: number = 50;
   @Input() circleWidth: number = 15;
+  @Input() middleText: string | number;
   progress: string;
   svgWidth: string;
   svgHeight: string;

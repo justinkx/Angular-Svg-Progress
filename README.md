@@ -8,9 +8,7 @@
 **SVG** Progress component for angular and ionic framework consist of bar, heart and circular loaders.
 
 ## Appearance ##
-
-### Basic ###
-  <img src="./src/assets/angular-svg-loader.gif" alt="Appearence">
+  <img src="https://user-images.githubusercontent.com/28846043/58533460-3d37ea00-8206-11e9-958d-f1d79af74dec.gif" alt="Appearence">
 
 ## Features
 - Each loader component is an svg.
@@ -68,7 +66,7 @@ This HTML code demonstrates basic usage of this module:
   [borderColor]="'#383a3e'"
   [direction]="'horizontal'"
   [showMiddleText]="true"
-  [middleTextStyle]="{textSize: 12,text: 'Loading'}"
+  [middleTextStyle]="{textSize: 12,fontWeight: 400}"
   [showPercentage]="true"
   [height]="40"
   [progressColor]="'#FF0000'">
@@ -89,14 +87,14 @@ The `<angular-svg-progress />` component takes many attributes that allows you t
 | showPercentage | boolean | To show the progress value | false |
 | percentageColor | string | Progress value text color | black |
 | showMiddleText | boolean | To show static text in the middle of the loader | false |
-| middleTextStyle | Object of type{text: string,textSize:number,fillColor:string,fontWeight:number/string} | style object for static text in the middle of the loader | null |
+| middleText | string /number | static/dynamic text in the middle of the loader | NA |
+| middleTextStyle | Object of type{textSize:number,fillColor:string,fontWeight:number/string} | style object for static text in the middle of the loader | null |
 | direction | string | Direction in which progress indicator grows. [horizontal,vertical] | horizontal |
 | backgroundFill | string | background color of the component svg | #eee8dc |
 | fontSize | number | Font size of the progress value text(pixel) | 15 |
 | borderRadius | number | Border radius for the svg component [only for shape bar] | 10 |
 | radius | number | Radius of the circular progress | 50 |
 | circleWidth | number | Width of the circular disk | 15 |
-
 
 
 ## Support this project
