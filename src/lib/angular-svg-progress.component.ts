@@ -57,7 +57,9 @@ export class AngularSvgProgressComponent implements OnInit {
     console.log(this.direction, this.x2, this.y1);
   }
   ngOnChanges(changes: SimpleChanges) {
-    const { currentValue, previousValue } = changes['svgProgress'];
+    const { currentValue, previousValue } = changes['svgProgress'] || {
+      currentValue: 0, previousValue: 0
+    };
     this.progress = currentValue.toString() + `%`;
     if (this.shape === 'circle') {
       this.strokeDashoffset = this.circumference * (1 - (this.svgProgress / 100));
